@@ -1,0 +1,20 @@
+package board.board.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import board.board.dto.BoardDto;
+
+@Mapper
+public interface BoardMapper {
+	List<BoardDto> selectBoardList() throws Exception;
+	
+	void insertBoard_434(BoardDto board) throws Exception;
+	
+	//게시글 상세보기
+		//조회수
+	void updateHitCount(int boardIdx) throws Exception;
+	
+	BoardDto selectBoardDetail(int boardIdx) throws Exception;
+}
