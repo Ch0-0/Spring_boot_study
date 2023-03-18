@@ -95,6 +95,7 @@ public class BoardController {
 		return "redirect:/board/openBoardList.do";
 	}
 	
+	//파일 다운로드
 	@RequestMapping("/board/downloadBoardFile.do")
 	public void downloadBoardFile(@RequestParam int idx, @RequestParam int boardIdx, HttpServletResponse response) throws Exception{
 		BoardFileDto boardFile = boardService.selectBoardFileInformation(idx, boardIdx);
